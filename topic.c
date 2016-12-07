@@ -352,6 +352,8 @@ PHP_METHOD(RdKafka__ProducerTopic, produce)
         zend_throw_exception(ce_kafka_exception, rd_kafka_err2str(err), err TSRMLS_CC);
         return;
     }
+
+    RETURN_LONG(ret);
 }
 /* }}} */
 
