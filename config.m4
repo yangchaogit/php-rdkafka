@@ -6,6 +6,8 @@ PHP_ARG_WITH(rdkafka, for rdkafka support,
 
 if test "$PHP_RDKAFKA" != "no"; then
 
+  #SEARCH_PATH="/usr/local /usr /usr/local/lib/librdkafka"     # you might want to change this
+  #SEARCH_FOR="include/librdkafka/rdkafka.h"  # you most likely want to change this
   SEARCH_PATH="/usr/local /usr"     # you might want to change this
   SEARCH_FOR="/include/librdkafka/rdkafka.h"  # you most likely want to change this
   if test -r $PHP_RDKAFKA/$SEARCH_FOR; then # path given as parameter
